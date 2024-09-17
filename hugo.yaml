@@ -2,23 +2,25 @@ baseURL: https://magical.industries/
 languageCode: en-us
 title: Magical Industries
 pagination.pagerSize: 10
+theme: ["PaperMod"]
+copyright: "© Magical Industries"
 
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+mainsections: ["Projects", "About"]
 
 minify:
   disableXML: true
   minifyOutput: true
 
-theme: ["PaperMod"]
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Magical Industries
   description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
+  keywords: [Portfolio, PaperMod]
   author: Hugo
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -58,23 +60,23 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    enabled: true # needs to be explicitly set
+    title: Magical Industries
+    subtitle: "Crafting Tomorrow’s Magic Today"
+    imageUrl: "/img/logo1.png"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: Logo
     buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+      - name: Projects
+        url: projects
+      - name: About
+        url: about
 
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: "Crafting Tomorrow’s Magic Today"
 
   socialIcons:
     - name: x
@@ -82,7 +84,7 @@ params:
     - name: stackoverflow
       url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/Magical-Industries"
 
   analytics:
     google:
@@ -115,13 +117,13 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: projects
+      name: Projects
+      url: /Projects/
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: about
+      name: About
+      url: /about/
       weight: 20
     - identifier: example
       name: example.org
@@ -132,8 +134,8 @@ pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
