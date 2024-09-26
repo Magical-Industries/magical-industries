@@ -47,11 +47,12 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+    # magick -background transparent "/Users/hugobelin/Downloads/Logo1.png" -define icon:auto-resize=16,24,32,48,64,72,96,128,256 "favicon.ico"
+    favicon: "img/favicon.ico"
+    favicon16x16: "img/favicon.ico"
+    favicon32x32: "img/favicon.ico"
+    apple_touch_icon: "img/favicon.ico"
+    safari_pinned_tab: "img/favicon.ico"
 
   label:
     text: "Home"
@@ -115,6 +116,11 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
+    outputs:
+      home:
+        - HTML
+        - RSS
+        - JSON # necessary for search
 menu:
   main:
     - identifier: projects
@@ -125,9 +131,9 @@ menu:
       name: About
       url: /about/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: radiance
+      name: Radiance
+      url: https://radiance.magical.industries
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
